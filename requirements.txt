@@ -1,0 +1,8 @@
+pymongo
+MongoClient
+serpapi
+GoogleSearch
+json
+flask
+connexion[swagger-ui]
+pandas

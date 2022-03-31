@@ -1,0 +1,38 @@
+openapi: 3.0.0
+info:
+        version: "1.0.0"
+        title: EDUSEARCH.IO
+        description: A was to access educational content without distractions!
+        termsOfService: 'http://swagger.io/terms/'
+        contact:
+                name: "Michael Foster"
+        license:
+                name: Apache
+paths:
+        /edusearch/add/term/<arg1>:
+                get:
+                        tags:
+                                - Plot
+                        operationId: scraper.search
+                        description: "Adds search item to database"
+                        responses:
+                                '200':
+                                        description: "Adds search items"
+                                        content:
+                                                application/json:
+                                                        schema: {}
+
+        /edusearch/find/term/<arg1>:
+                get:
+                        tags:
+                                - Plot
+                        operationId: scraper.get_data
+                        description: "Returns results of db"
+                        response:
+                                '200':
+                                        description: "Returns db resutls"
+                                        content:
+                                                application/json:
+                                                        schema: {}
+servers:
+        - url: "http://localhost:8080"
